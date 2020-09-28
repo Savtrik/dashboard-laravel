@@ -15,8 +15,10 @@
     };
 
     function konsumsi(data) {
-      document.getElementById("kons").innerHTML = data[0]+" W";
-      document.getElementById("prod").innerHTML = data[1]+" W";
+      // document.getElementById("kons").innerHTML = data[0]+" W";
+      document.getElementById("kons").innerHTML = "6.1 KWh";
+      // document.getElementById("prod").innerHTML = data[1]+" W";
+      document.getElementById("prod").innerHTML = "4.8 KWh";
       document.getElementById("kons_time").innerHTML = "Konsumsi pada "+data[2]+" WIB";
       document.getElementById("prod_time").innerHTML = "Produksi pada "+data[2]+" WIB";
     }

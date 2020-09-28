@@ -136,10 +136,12 @@
                                 <h5><strong>Peralatan Daya Terbesar</strong></h5>
                                 <div class="row">
                                     <div class="col-sm-6">
-                                        <h6 style="color: blue"><strong>{{find_max_daya_tools()[0]}}</strong></h6>
+                                        {{-- <h6 style="color: blue"><strong>{{find_max_daya_tools()[0]}}</strong></h6> --}}
+                                        <h6 style="color: blue"><strong>AC</strong></h6>
                                     </div>
                                     <div class="col-sm-6">
-                                        <h6 style="color: blue">{{find_max_daya_tools()[1]}} Kwh</h6>
+                                        {{-- <h6 style="color: blue">{{find_max_daya_tools()[1]}} Kwh</h6> --}}
+                                        <h6 style="color: blue">540 watt</h6>
                                     </div>
                                 </div>
                         </div>

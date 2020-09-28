@@ -87,21 +87,27 @@ class DashboardController extends Controller
         $data_y1 = array();
         $count_y1 = Data::all()->count();
         if ($count_y1 < 288) {
-            $data_y1 = Data::select('POWER_PS')->orderBy('ONINSERT', 'desc')->take(288)->pluck('POWER_PS')->toArray();
+            $data_y1 = Data::select('POWER_PS')->orderBy('ONINSERT', 'desc')->limit(288)->pluck('POWER_PS')->toArray();
+            // dd($data_y1);
             if(sizeof($data_y1)==0) array_push($data_y1,0);
             for($i=0; $i < (288-$count_y1); $i++){
                 array_push($data_y1,0);
             }
             // dd($data_y1);
+        } else {
+            $data_y1 = Data::select('POWER_PS')->orderBy('ONINSERT', 'desc')->limit(288)->pluck('POWER_PS')->toArray();
         }
         $count_y2 = Data::all()->count();
         if ($count_y2 < 288) {
-            $data_y2 = Data::select('POWER_LOAD')->orderBy('ONINSERT', 'desc')->take(288)->pluck('POWER_LOAD')->toArray();
+            $data_y2 = Data::select('POWER_LOAD')->orderBy('ONINSERT', 'desc')->limit(288)->pluck('POWER_LOAD')->toArray();
             if(sizeof($data_y2)==0) array_push($data_y2,0);
             for($i=0; $i <= (288-$count_y2); $i++){
                 array_push($data_y2,0);
             }
+        } else {
+            $data_y2 = Data::select('POWER_LOAD')->orderBy('ONINSERT', 'desc')->limit(288)->pluck('POWER_LOAD')->toArray();
         }
+        // dd($data_y1);
         $max_data = max($data_y1);
         if(max($data_y1)<max($data_y2)) $max_data = max($data_y2);
         $max = round($max_data);

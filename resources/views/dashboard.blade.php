@@ -74,11 +74,11 @@
                     <h2>Realtime Monitoring</h2>
                       <div class="d-md-flex align-items-center">
                               <div class="col-3">
-                                  <h4 class="card-title" style="color: blue" id="kons">-</h4>
-                                  <span><h5 class="card-subtitle" id="kons_time"></h5></span>
+                                  <h4 class="card-title" style="color: blue" id="kons"></h4>
+                                  <span><h5 class="card-subtitle" id="kons_time">-</h5></span>
                               </div>
                               <div class="col-3">
-                                  <h4 class="card-title" style="color: orange" id="prod">-</h4>
+                                  <h4 class="card-title" style="color: orange" id="prod"></h4>
                                   <h5 class="card-subtitle" id="prod_time">-</h5>
                               </div> <br>
                       </div>
